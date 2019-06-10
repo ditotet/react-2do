@@ -63,14 +63,16 @@ export default class ItemList extends Component {
   render() {
     return (
       <div>
-        <input type="text" value={ this.state.curItem } onChange={ (e) => this.handleChange(e) }/>
-        <br/>
-        <button className="btn-green" type="submit" onClick={ (e) => this.handleClick(e) }>Add Item</button>
-        <button className="btn-red" onClick={ this.handleClear }>Clear Done</button>
-        <h5>Currently you have { this.state.todoItems.length } things to do</h5>
-        { this.state.todoItems.map((item) => (
-          <Item item={ item } handleMarkDone={ this.handleMarkDone.bind(this) } />
-        )) }
+        <form>
+          <input type="text" value={ this.state.curItem } onChange={ (e) => this.handleChange(e) }/>
+          <br/>
+          <button className="btn-green" type="submit" onClick={ (e) => this.handleClick(e) }>Add Item</button>
+          <button className="btn-red" onClick={ this.handleClear }>Clear Done</button>
+          <h5>Currently you have { this.state.todoItems.length } things to do</h5>
+          { this.state.todoItems.map((item) => (
+            <Item item={ item } handleMarkDone={ this.handleMarkDone.bind(this) } />
+          )) }
+        </form>
       </div>
     );
   }
