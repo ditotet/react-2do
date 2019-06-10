@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 .App {
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-logo {
@@ -21,6 +26,92 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 50px;
+}
+
+button {
+  margin-left: 15px;
+  padding: 8px 20px;
+  color: white;
+  border: none;
+}
+
+button:active {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #00A03E;
+}
+
+.btn-green:hover {
+  background-color: rgb(123, 206, 0);
+}
+
+.btn-blue {
+  background-color: rgb(0, 182, 228);
+}
+
+.btn-blue:hover {
+  background-color: rgb(71, 161, 202);
+}
+
+.btn-red {
+  background-color: #ED1C24;
+}
+.btn-red:hover {
+  background-color: #F05B47;
+}
+
+input {
+  height: 18px;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.item {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px 10px;
+  width: 70%;
+  box-shadow: 0 0 10px lightgray;
+}
+
+.item:hover {
+  box-shadow: 0 0 15px rgb(185, 185, 185);
+}
+
+.item-desc {
+  width: 70%;
+  display: table-cell;
+  text-align: left;
+  padding-left: 10px;
+  word-wrap: break-word;
+  white-space: initial;
+  overflow-wrap: break-word;
+}
+
+.btn-wrapper {
+  display: table-cell;
 }
 
 @keyframes App-logo-spin {
