@@ -76,8 +76,11 @@ button:hover {
 }
 
 input {
+  width: 250px;
   height: 18px;
   padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(221, 221, 221);
 }
 
 input:focus {
@@ -101,17 +104,22 @@ button:focus {
 }
 
 .item-desc {
-  width: 70%;
-  display: table-cell;
+  width: 60%;
+  display: inline-block;
   text-align: left;
   padding-left: 10px;
-  word-wrap: break-word;
-  white-space: initial;
-  overflow-wrap: break-word;
+  word-break: break-all;
+  vertical-align: middle;
+  /* background-color: red; */
 }
 
 .btn-wrapper {
-  display: table-cell;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  /* height: 100px; */
+  /* background-color: #00A03E; */
 }
 
 @keyframes App-logo-spin {
