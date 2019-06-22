@@ -42,7 +42,8 @@ export default class ItemList extends Component {
     
   }
 
-  handleMarkDone = (item) => {
+  handleMarkDone = (item, e) => {
+    e.preventDefault();
     this.setState({
       todoItems: this.state.todoItems.map((el) => { 
         if (item.id === el.id) {
@@ -54,7 +55,8 @@ export default class ItemList extends Component {
     console.log(this.state.todoItems);
   }
 
-  handleClear = () => {
+  handleClear = (e) => {
+    e.preventDefault();
       this.setState({
         todoItems: this.state.todoItems.filter((el) => !el.isDone)
       });
@@ -67,7 +69,7 @@ export default class ItemList extends Component {
           <input type="text" value={ this.state.curItem } onChange={ (e) => this.handleChange(e) }/>
           <br/>
           <button className="btn-green" type="submit" onClick={ (e) => this.handleClick(e) }>Add Item</button>
-          <button className="btn-red" onClick={ this.handleClear }>Clear Done</button>
+          <button className="btn-red" onClick={ (e) => this.handleClear(e) }>Clear Done</button>
           <h5>Currently you have { this.state.todoItems.length } things to do</h5>
           { this.state.todoItems.map((item) => (
             <Item item={ item } handleMarkDone={ this.handleMarkDone.bind(this) } />

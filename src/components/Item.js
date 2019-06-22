@@ -7,7 +7,7 @@ export default class Item extends Component {
       <div className="item">
           <div className={"item-desc " +  itemClass }>{ this.props.item.name }</div> 
           <div className="btn-wrapper">
-            <button className="btn-blue" onClick= { () => this.props.handleMarkDone(this.props.item) }>
+            <button className="btn-blue" onClick= { (e) => this.props.handleMarkDone(this.props.item, e) }>
               { this.props.item.isDone ? 'Undo mark' : 'Mark done' }
             </button>
           </div>
